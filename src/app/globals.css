@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { background:#080b14; color:#e8ecf8; font-family: Inter, ui-sans-system, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+* { -webkit-tap-highlight-color: transparent; }
+::selection { background:#7c3aed; color:white; }
+::-webkit-scrollbar { width:10px; height:10px; }
+::-webkit-scrollbar-thumb { background:#262f4a; border-radius:99px; border:2px solid #080b14; }
+::-webkit-scrollbar-track { background:#0b0f1c; }
+
+@keyframes xpFloat { 0%{ transform:translateY(10px) scale(.9); opacity:0 } 25%{ opacity:1 } 100%{ transform:translateY(-46px) scale(1.1); opacity:0 } }
+@keyframes popIn { from{ transform:scale(.92) translateY(8px); opacity:0 } to{ transform:scale(1) translateY(0); opacity:1 } }
+@keyframes shimmer { from{ background-position:200% 0 } to{ background-position:-200% 0 } }
+@keyframes confettiFall { 0%{ transform:translateY(-10px) rotate(0deg); opacity:1 } 100%{ transform:translateY(260px) rotate(540deg); opacity:0 } }
+@keyframes glowPulse { 0%,100%{ box-shadow:0 0 0 0 rgba(167,139,250,.35)} 50%{ box-shadow:0 0 32px 4px rgba(167,139,250,.35)} }
+.anim-pop { animation: popIn .45s cubic-bezier(.21,1.02,.55,1.2) both; }
+.anim-xp { animation: xpFloat 1.6s ease-out both; }
+.anim-glow { animation: glowPulse 2.4s ease-in-out infinite; }
+.confetti-piece { animation: confettiFall 1.8s ease-in both; }
+.progress-stripes { background-image: linear-gradient(110deg, #8b5cf6, #6366f1 40%, #22d3ee 70%, #8b5cf6); background-size:200% 100%; animation: shimmer 2.8s linear infinite; }
+input[type="checkbox"] { accent-color:#8b5cf6; }
